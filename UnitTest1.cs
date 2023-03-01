@@ -33,5 +33,12 @@ namespace TestingRegex
             string actualOutput = regexMethod.ValidatePhoneNumber("91 7729937460");
             Assert.That(actualOutput, Is.EqualTo(expectedOutput));
         }
+        [Test]
+        public void GivenPassword_WhenAnalysed_ShouldReturnPassword()
+        {
+            string expectedOutput = "Password is matching with Regex";
+            string actualOutput = regexMethod.ValidatePassword("Vijay0987");
+            Assert.That(actualOutput, Is.EqualTo(expectedOutput));
+        }
     }
 }
