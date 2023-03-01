@@ -19,5 +19,12 @@ namespace TestingRegex
             string actualOutput = regexMethod.ValidateLastName("Durkikar");
             Assert.That(actualOutput, Is.EqualTo(expectedOutput));
         }
+        [Test]
+        public void GivenEmail_WhenAnalysed_ShouldReturnEmail()
+        {
+            string expectedOutput = "Email id is matching with Regex";
+            string actualOutput = regexMethod.ValidateEmail("abc.xyz@bridgelabz.co.in");
+            Assert.That(actualOutput, Is.EqualTo(expectedOutput));
+        }
     }
 }
