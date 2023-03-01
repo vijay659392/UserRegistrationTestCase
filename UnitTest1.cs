@@ -26,5 +26,12 @@ namespace TestingRegex
             string actualOutput = regexMethod.ValidateEmail("abc.xyz@bridgelabz.co.in");
             Assert.That(actualOutput, Is.EqualTo(expectedOutput));
         }
+        [Test]
+        public void GivenPhoneNumber_WhenAnalysed_ShouldReturnPhoneNumber()
+        {
+            string expectedOutput = "Phone Number is matching with Regex";
+            string actualOutput = regexMethod.ValidatePhoneNumber("91 7729937460");
+            Assert.That(actualOutput, Is.EqualTo(expectedOutput));
+        }
     }
 }
