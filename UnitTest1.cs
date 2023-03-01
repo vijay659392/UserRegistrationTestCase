@@ -54,5 +54,12 @@ namespace TestingRegex
             string actualOutput = regexMethod.ValidateNumericPassword("Vijay8");
             Assert.That(actualOutput, Is.EqualTo(expectedOutput));
         }
+        [Test]
+        public void GivenValidateSpecialCharacter_WhenAnalysed_ShouldReturnValidateSpecialCharacter()
+        {
+            string expectedOutput = "Special Character is matching with Regex";
+            string actualOutput = regexMethod.ValidateSpecialCharacter("Vijay@8");
+            Assert.That(actualOutput, Is.EqualTo(expectedOutput));
+        }
     }
 }
